@@ -12,9 +12,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "tf-rafanilo.com"
-    key = "rahona-sy-devops.tfstate"
-    region = "ca-central-1"
+    bucket  = "tf-rafanilo.com"
+    key     = "rahona-sy-devops.tfstate"
+    region  = "ca-central-1"
     encrypt = true
   }
 }

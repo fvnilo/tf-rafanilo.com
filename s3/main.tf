@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "rafanilo_com" {
-   bucket = "rafanilo.com" 
+  bucket = "rafanilo.com"
 
-   force_destroy = true
+  force_destroy = true
 
-   tags = {
-    Name        = "rafanilo.com"
+  tags = {
+    Name = "rafanilo.com"
   }
 }
 
@@ -26,14 +26,14 @@ data "aws_iam_policy_document" "allow_access_from_cloudflare" {
     sid = "AllowCloudflareAccessOnly"
 
     principals {
-      type = "*"
+      type        = "*"
       identifiers = ["*"]
     }
 
     condition {
-        test = "IpAddress"
-        variable = "aws:SourceIp"
-        values = var.cloudflare_ip_ranges
+      test     = "IpAddress"
+      variable = "aws:SourceIp"
+      values   = var.cloudflare_ip_ranges
     }
 
     actions = [
