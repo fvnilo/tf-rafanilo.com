@@ -12,8 +12,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "tf-rafanilo.com"
-    key     = "rahona-sy-devops.tfstate"
+    bucket  = "fanilo-terraform-states"
+    key     = "websites/rahonasydevops.com.tfstate"
     region  = "ca-central-1"
     encrypt = true
   }

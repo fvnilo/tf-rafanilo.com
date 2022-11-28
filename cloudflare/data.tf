@@ -1,5 +1,5 @@
 data "cloudflare_ip_ranges" "cloudflare" {}
 
-data "cloudflare_zone" "rafanilo_com" {
-  name = "rafanilo.com"
+data "cloudflare_zone" "rahonasydevops_com" {
+  name = "rahonasydevops.com"
 }

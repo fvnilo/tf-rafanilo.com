@@ -1,6 +1,6 @@
-# tf-rafanilo.com
+# tf-rahonasydevops.com
 
-> Terraform project for rafanilo.com
+> Terraform project for rahonasydevops.com
 
 ## Getting Started
 

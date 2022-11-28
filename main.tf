@@ -8,5 +8,5 @@ module "cloudflare" {
   source = "./cloudflare"
 
   cloudflare_api_token  = var.cloudflare_api_token
-  rafanilo_com_endpoint = module.s3.rafanilo_com_endpoint
+  rahonasydevops_com_endpoint = module.s3.rahonasydevops_com_endpoint
 }

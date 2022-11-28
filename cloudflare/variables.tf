@@ -2,6 +2,6 @@ variable "cloudflare_api_token" {
   type = string
 }
 
-variable "rafanilo_com_endpoint" {
+variable "rahonasydevops_com_endpoint" {
   type = string
 }

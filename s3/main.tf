@@ -1,15 +1,15 @@
-resource "aws_s3_bucket" "rafanilo_com" {
-  bucket = "rafanilo.com"
+resource "aws_s3_bucket" "rahonasydevops_com" {
+  bucket = "rahonasydevops.com"
 
   force_destroy = true
 
   tags = {
-    Name = "rafanilo.com"
+    Name = "rahonasydevops.com"
   }
 }
 
-resource "aws_s3_bucket_website_configuration" "rafanilo_com" {
-  bucket = aws_s3_bucket.rafanilo_com.bucket
+resource "aws_s3_bucket_website_configuration" "rahonasydevops_com" {
+  bucket = aws_s3_bucket.rahonasydevops_com.bucket
 
   index_document {
     suffix = "index.html"
@@ -17,7 +17,7 @@ resource "aws_s3_bucket_website_configuration" "rafanilo_com" {
 }
 
 resource "aws_s3_bucket_policy" "allow_access_from_cloudflare" {
-  bucket = aws_s3_bucket.rafanilo_com.id
+  bucket = aws_s3_bucket.rahonasydevops_com.id
   policy = data.aws_iam_policy_document.allow_access_from_cloudflare.json
 }
 
@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "allow_access_from_cloudflare" {
     ]
 
     resources = [
-      "${aws_s3_bucket.rafanilo_com.arn}/*",
+      "${aws_s3_bucket.rahonasydevops_com.arn}/*",
     ]
   }
 }
